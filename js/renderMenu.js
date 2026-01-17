@@ -28,7 +28,7 @@ export function renderMenu(items, container) {
                 <p class="menu-description">${item.description}</p>
                 <button 
                     class="btn primary btn-sm w-100 order-btn add-to-order" 
-                    data-id="${item.id} 
+                    data-id="${item.id}" 
                     data-name="${item.name}"
                     data-price="${item.price}"
                 >

@@ -16,7 +16,7 @@ let menuItems = [];
 let activeCategory = "all";
 
 // Shopping cart data (persisted using localStorage)
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+//let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 /* =========================================================
    DOM ELEMENT REFERENCES
@@ -54,10 +54,10 @@ const incBtn = document.getElementById("increaseQty");
 const decBtn = document.getElementById("decreaseQty");
 
 // Cart count badge
-const cartCountEl = document.getElementById("cartCount");
+//const cartCountEl = document.getElementById("cartCount");
 
 // Add to cart button inside order modal
-const addToCartBtn = document.querySelector("#orderModal .btn.primary");
+//const addToCartBtn = document.querySelector("#orderModal .btn.primary");
 
 /* =========================================================
    1. MOBILE NAVIGATION TOGGLE
@@ -241,43 +241,6 @@ document.addEventListener("click", (e) => {
   orderModal.style.display = "flex";
 });
 
-/* =========================================================
-   CART LOGIC
-   ========================================================= */
-// Update cart item count badge
-function updateCartCount() {
-  const totalQty = cart.reduce((sum, item) => sum + item.quantity, 0);
-  cartCountEl.textContent = totalQty;
-}
-
-// Add selected item to cart
-addToCartBtn.addEventListener("click", () => {
-  const itemName = orderItemName.textContent;
-  const itemPrice = Number(orderItemPrice.textContent.replace("₹", ""));
-  const quantity = Number(qtyInput.value);
-
-  // Check if item already exists in cart
-  const existingItem = cart.find(item => item.name === itemName);
-
-  if (existingItem) {
-    existingItem.quantity += quantity;
-  } else {
-    cart.push({
-      name: itemName,
-      price: itemPrice,
-      quantity
-    });
-  }
-
-  // Save cart to localStorage
-  localStorage.setItem("cart", JSON.stringify(cart));
-
-  // Update cart UI
-  updateCartCount();
-
-  // Close modal after adding to cart
-  orderModal.style.display = "none";
-});
 
 /* =========================================================
    DOM CONTENT LOADED
