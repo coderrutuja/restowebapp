@@ -22,6 +22,14 @@ let isManualScroll = false;
 // Shopping cart data (persisted using localStorage)
 //let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+// MOBILE SAFETY: Disable reveal animations on small screens
+if (window.innerWidth <= 768) {
+  document.querySelectorAll(".reveal").forEach(el => {
+    el.classList.add("reveal-active");
+  });
+}
+
+
 /* =========================================================
    DOM ELEMENT REFERENCES
    ========================================================= */
