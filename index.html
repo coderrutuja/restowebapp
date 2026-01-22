@@ -17,7 +17,9 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"> -->
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -76,7 +78,7 @@
         </section>
 
         <!-- ================= ABOUT SECTION ================= -->
-        <section id="about" class="section about">
+        <section id="about" class="section about reveal">
             <div class="container">
                 <div class="about-grid">
 
@@ -113,7 +115,7 @@
         </section>
 
         <!-- ================= MENU SECTION ================= -->
-        <section id="menu" class="section-light">
+        <section id="menu" class="section light reveal">
             <div class="container">
 
                 <!-- Section header -->
@@ -145,43 +147,10 @@
 
             </div>
         </section>
-
-        <!-- ================= BOOK TABLE MODAL ================= -->
-        <section>
-            <div class="modal" id="bookTableModal">
-                <div class="modal-content">
-
-                    <!-- Close modal -->
-                    <button class="modal-close" id="closeBookTable">&times;</button>
-
-                    <h2>Book a Table</h2>
-
-                    <!-- Booking form -->
-                    <form class="booking-form">
-                        <input type="text" placeholder="Full Name" required />
-                        <input type="tel" placeholder="Phone Number" required />
-                        <input type="date" required />
-                        <input type="time" required />
-
-                        <select required>
-                            <option value="">Guests</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>4</option>
-                            <option>6+</option>
-                        </select>
-
-                        <button type="submit" class="btn primary">Confirm Booking</button>
-                    </form>
-
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <!-- ================= FOOTER ================= -->
-    <footer class="footer">
+    <footer class="footer reveal">
         <div class="container footer-grid">
 
             <!-- Brand info -->
@@ -227,6 +196,37 @@
     <!-- Main JavaScript file -->
     <script type="module" src="js/script.js"></script>
 
+    <!-- ================= BOOK TABLE MODAL ================= -->
+    
+            <div class="modal" id="bookTableModal">
+                <div class="modal-content">
+
+                    <!-- Close modal -->
+                    <button class="modal-close" id="closeBookTable">&times;</button>
+
+                    <h2>Book a Table</h2>
+
+                    <!-- Booking form -->
+                    <form class="booking-form">
+                        <input type="text" placeholder="Full Name" required />
+                        <input type="tel" placeholder="Phone Number" required />
+                        <input type="date" required />
+                        <input type="time" required />
+
+                        <select required>
+                            <option value="">Guests</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>4</option>
+                            <option>6+</option>
+                        </select>
+
+                        <button type="submit" class="btn primary">Confirm Booking</button>
+                    </form>
+
+                </div>
+            </div>
+
     <!-- ================= ORDER MODAL ================= -->
     <div class="modal" id="orderModal">
         <div class="modal-content order-modal">
@@ -247,6 +247,31 @@
 
             <!-- Add to cart -->
             <button class="btn primary full-width">Add to Cart</button>
+        </div>
+    </div>
+
+    
+    <!-- ================= DESIGNER INTRO MODAL ================= -->
+    <div class="modal" id="designerModal">
+        <div class="modal-content designer-modal">
+
+            <!-- Close button -->
+            <button class="modal-close" id="closeDesignerModal">&times;</button>
+
+            <!-- Designer image -->
+            <img 
+                src="assets/images/designer.jpeg" 
+                alt="Website Designer"
+                class="designer-img"
+            />
+
+            <!-- Designer message -->
+            <h2 class="designer-title">Hello 👋</h2>
+            <p class="designer-text">
+                I, <strong>Rutuja Ainapure</strong>, proudly designed and developed this website
+                with passion, creativity, and clean code.
+            </p>
+
         </div>
     </div>
 
